@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-//  Copyright (c) 2013-2016 Sun Yat-Sen University (SYSU). All Rights Reserved.
+//  Copyright (c) 2013-2018 Sun Yat-Sen University (SYSU). All Rights Reserved.
 //
 //  SYSU grants permission to use, copy, modify, and distribute this software
 //  and its documentation for NON-COMMERCIAL purposes and without fee, provided
@@ -13,9 +13,9 @@
 //
 // Authors: Qiang Huang  (huangq2011@gmail.com)
 //
-// Created on:       2015-02-08
-// Last Modified on: 2016-04-12
-// Version 0.2.1
+// Created on:       2015-10-08
+// Last Modified on: 2016-08-12
+// Version 1.0.0
 // -----------------------------------------------------------------------------
 
 #include <stdio.h>
