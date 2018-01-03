@@ -68,6 +68,6 @@ Conference on Similarity Search and Applications (SISAP), 3 - 14, 2015.**
 
 * **Rasmus Pagh, Francesco Silvestri, Johan Sivertsen, and Matthew Skala. 
 Approximate furthest neighbor with application to annulus query. 
-Information Systems 64: 152-162, 2017.
+Information Systems 64: 152-162, 2017.**
 
 If you use the package for publications, please cite their papers above.
