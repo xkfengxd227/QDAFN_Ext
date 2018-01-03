@@ -13,8 +13,8 @@ external version of Query-Dependent Approximate Furthest Neighbor (QDAFN),
 which is used for c-Approximate Furthest Neighbor (or simply c-AFN) search 
 under Euclidean distance. 
 
-The original QDAFN was an internal algorithm which was proposed 
-by Dr. Rasmus Pagh, Dr. Francesco Silvestri, Dr. Johan Sivertsen and 
+The original QDAFN is an internal algorithm which was proposed by 
+Dr. Rasmus Pagh, Dr. Francesco Silvestri, Dr. Johan Sivertsen and 
 Dr. Matthew Skala in their SISAP 2015 paper. We adapt the original one 
 into an external algorithm used for our comparison with RQALSH and RQALSH* 
 in our ICDE 2017 and TKDE 2017 papers. 
