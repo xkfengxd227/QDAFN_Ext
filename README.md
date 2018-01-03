@@ -60,7 +60,7 @@ Relevant Paper
 --------
 
 The papers for QDAFN has been published in SISAP 2015 and Information 
-System 2017, which are displayed as follows:
+Systems 2017, which are displayed as follows:
 
 * **Rasmus Pagh, Francesco Silvestri, Johan Sivertsen, and Matthew Skala. 
 Approximate furthest neighbor in high dimensions. In International 
