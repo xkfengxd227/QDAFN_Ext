@@ -9,29 +9,31 @@ class BTree;
 // -----------------------------------------------------------------------------
 class BNode {
 public:
-	BNode();						// constructor
+	BNode();						// default constructor
 	~BNode();						// destructor
 
 	// -------------------------------------------------------------------------
 	void init(						// init a new node, which not exist
-		int level,						// level (depth) in b-tree
-		BTree* btree);					// b-tree of this node
+		int   level,					// level (depth) in b-tree
+		BTree *btree);					// b-tree of this node
 
 	// -------------------------------------------------------------------------
 	void init_restore(				// load an exist node from disk to init
-		BTree* btree,					// b-tree of this node
-		int block);						// address of file of this node
+		BTree *btree,					// b-tree of this node
+		int   block);					// address of file of this node
 
 	// -------------------------------------------------------------------------
 	void read_from_buffer(			// read a b-node from buffer
-		char* buf);						// store info of a b-node
+		const char *buf);				// store info of a b-node
 
 	// -------------------------------------------------------------------------
 	void write_to_buffer(			// write a b-node into buffer
-		char* buf);						// store info of a b-node
+		char *buf);						// store info of a b-node (return)
 
 	// -------------------------------------------------------------------------
 	BNode* get_left_sibling();		// get left sibling node
+
+	// -------------------------------------------------------------------------
 	BNode* get_right_sibling();		// get right sibling node
 
 	// -------------------------------------------------------------------------
@@ -41,7 +43,7 @@ public:
 	// -------------------------------------------------------------------------
 	void add_new_child(				// add new child by its child node
 		float key,						// input key
-		int son);						// input son
+		int   son);						// input son
 
 	// -------------------------------------------------------------------------
 	int find_position_by_key(		// find pos just less than input key
@@ -68,29 +70,24 @@ public:
 
 	// -------------------------------------------------------------------------
 	void set_left_sibling(			// set <left_sibling>
-		int left_sibling);				// addr of left sibling node
+		int left_sibling);				// left sibling node address
 
 	// -------------------------------------------------------------------------
 	void set_right_sibling(			// set <right sibling>
-		int right_sibling);				// addr of right sibling node
+		int right_sibling);				// right sibling node address
 
 protected:
-	// -------------------------------------------------------------------------
-									// disk params
-	char   level_;					// level of b-tree (level > 0)
-	int    num_entries_;			// number of entries in this node
-	int    left_sibling_;			// addr in disk for left  sibling
-	int    right_sibling_;			// addr in disk for right sibling
-	float* key_;					// keys
-	int*   son_;					// addr of son node or object id
+	char  level_;					// level of b-tree (level > 0)
+	int   num_entries_;				// number of entries in this node
+	int   left_sibling_;			// addr in disk for left  sibling
+	int   right_sibling_;			// addr in disk for right sibling
+	float *key_;					// keys
+	int   *son_;					// son node address or object id
 
-	// -------------------------------------------------------------------------
-									// other params
-	bool   dirty_;					// if dirty, write back to file
-	int    block_;					// addr of disk for this node
-	int    capacity_;				// max num of entries can be stored
-	BTree* btree_;					// b-tree of this node
+	bool  dirty_;					// if dirty, write back to file
+	int   block_;					// disk address for this node
+	int   capacity_;				// max num of entries can be stored
+	BTree *btree_;					// b-tree of this node
 };
 
-
-#endif
+#endif // __B_NODE_H

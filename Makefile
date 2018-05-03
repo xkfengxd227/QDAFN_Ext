@@ -1,18 +1,18 @@
-SRCS=pri_queue.cpp util.cpp block_file.cpp b_node.cpp b_tree.cpp \
-      qdafn.cpp afn.cpp main.cpp
-OBJS=$(SRCS:.cpp=.o)
+SRCS=util.cc pri_queue.cc block_file.cc b_node.cc b_tree.cc \
+      qdafn.cc afn.cc main.cc
+OBJS=${SRCS:.cc=.o}
 
-CXX?=g++ -std=c++11
+CXX=g++ -std=c++11
 CPPFLAGS=-w -O3
 
 .PHONY: clean
 
-all: $(OBJS)
-	$(CXX) -o qdafn $(OBJS)
-
-pri_queue.o: pri_queue.h
+all: ${OBJS}
+	${CXX} ${CPPFLAGS} -o qdafn ${OBJS}
 
 util.o: util.h
+
+pri_queue.o: pri_queue.h
 
 block_file.o: block_file.h
 
@@ -27,4 +27,4 @@ afn.o: afn.h
 main.o:
 
 clean:
-	-rm $(OBJS) qdafn
+	-rm ${OBJS} qdafn
