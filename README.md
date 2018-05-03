@@ -1,8 +1,10 @@
 # QDAFN_Ext: External Version of Query-Dependent Approximate Furthest Neighbor
 
-Version: 1.0.0
+Version: 1.0.1
 
-Release date: 3 January 2018
+Release date:  03-01-2018
+
+Last Modified: 03-05-2018
 
 
 Introduction
@@ -28,7 +30,7 @@ for comipling and running this package. Before start running this package,
 please ensure the input format of the dataset and query set is correct. We 
 provide a sample dataset and query set (i.e., Mnist) for your reference.
 
-We also provide the scripts (i.e., run_guarantee.sh, run_sift.sh, run_gist.sh, 
+We also share the scripts (i.e., run_guarantee.sh, run_sift.sh, run_gist.sh, 
 run_trevi.sh, and run_p53.sh) for the users who would like to reproduce our
 results presented in our ICDE 2017 and TKDE 2017 papers. The datasets Sift, 
 Gist, Trevi, and P53 we used can be downloaded from the following links:
